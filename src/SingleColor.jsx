@@ -18,7 +18,7 @@ const SingleColor = ({ index, rgb, hexColor, weight }) => {
 
   return (
     <article
-      className={`border-[1px] border-black w-40 h-40 flex flex-col justify-center items-center font-mono font-semibold ${
+      className={`border-[1px] border-black w-60 h-60 flex flex-col justify-center items-center font-mono font-semibold ${
         index > 10 && "text-white"
       }`}
       style={{ backgroundColor: `${hexColor}` }}

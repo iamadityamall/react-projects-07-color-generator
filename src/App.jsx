@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <>
-      <section className="flex justify-center p-10 items-center capitalize mt-20">
+      <section className="flex flex-col mt-10 py-10 md:flex-row justify-center items-center capitalize">
         <h3 className="text-2xl p-5 font-bold font-mono text-green-400">color generator</h3>
         <form onSubmit={handleSubmit} className="flex">
           <input
@@ -39,7 +39,7 @@ const App = () => {
           <button type="submit" className="px-5 text-2xl text-white bg-green-600/70 ml-5 rounded-sm capitalize">generate</button>
         </form>
       </section>
-      <section className="flex flex-wrap mx-10 space-x-1 space-y-1 justify-end items-end">
+      <section className="flex flex-wrap mx-10 md:space-x-0 mb-10 space-y-1 justify-center items-end ">
         {colorList.map((color, index) => {
           const hexColor = `#${color.hex}`;
           return (
