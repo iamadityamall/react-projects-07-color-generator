@@ -12,6 +12,10 @@ const SingleColor = ({ index, rgb, hexColor, weight }) => {
     return () => clearTimeout(timeout);
   }, [alert, hexColor]);
 
+  useEffect(() => {
+      document.title = 'color-generator'
+  }, [])
+
   return (
     <article
       className={`border-[1px] border-black w-40 h-40 flex flex-col justify-center items-center font-mono font-semibold ${
