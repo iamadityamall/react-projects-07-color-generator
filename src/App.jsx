@@ -26,7 +26,7 @@ const App = () => {
     <>
       <section className="flex flex-col mt-10 py-10 md:flex-row justify-center items-center capitalize">
         <h3 className="text-2xl p-5 font-bold font-mono text-green-400">color generator</h3>
-        <form onSubmit={handleSubmit} className="flex">
+        <form onSubmit={handleSubmit} className="flex flex-col md:flex-row">
           <input
             type="text"
             value={color}
