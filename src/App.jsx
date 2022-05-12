@@ -4,7 +4,7 @@ import { useState } from "react";
 import SingleColor from "./SingleColor";
 
 const App = () => {
-  const [color, setColor] = useState("#222");
+  const [color, setColor] = useState("");
   const [isError, setIsError] = useState(false);
   const [colorList, setColorList] = useState(new Values("#FF5E00").all(10));
 
@@ -30,7 +30,7 @@ const App = () => {
           <input
             type="text"
             value={color}
-            placeholder="#222"
+            placeholder="#FF5E00"
             onChange={(e) => setColor(e.target.value)}
             className={`border-2 p-5 border-black ${
               isError && "border-red-500 border-2"
@@ -41,7 +41,7 @@ const App = () => {
       </section>
       <section className="flex flex-wrap mx-10 md:space-x-0 mb-10 space-y-1 justify-center items-end ">
         {colorList.map((color, index) => {
-          const hexColor = `#${color.hex}`;
+          const hexColor = `#${(color.hex).toUpperCase()}`;
           return (
             <SingleColor
               key={index}
